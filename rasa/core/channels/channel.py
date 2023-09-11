@@ -160,7 +160,8 @@ class InputChannel:
         Returns:
             Metadata which was extracted from the request.
         """
-        pass
+        
+        return request.json["metadata"]
 
 
 def decode_jwt(bearer_token: Text, jwt_key: Text, jwt_algorithm: Text) -> Dict:
